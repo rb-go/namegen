@@ -26,11 +26,11 @@ jobs:
 
       - run: go version
 
-      - name: Set up GOPATH
-        shell: bash
-        run: |
-          echo "GOPATH=${{ github.workspace }}" >> "$GITHUB_ENV"
-          echo "${{ github.workspace }}/bin" >> "$GITHUB_PATH"
+      # - name: Set up GOPATH
+      #   shell: bash
+      #   run: |
+      #     echo "GOPATH=${{ github.workspace }}" >> "$GITHUB_ENV"
+      #     echo "${{ github.workspace }}/bin" >> "$GITHUB_PATH"
 
       - uses: actions/checkout@v3
 
