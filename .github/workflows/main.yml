@@ -9,11 +9,9 @@ jobs:
       matrix:
         os:
           - ubuntu-latest
-          - macos-latest
-          - windows-latest
+          # - macos-latest
+          # - windows-latest
         go-version:
-          - '1.16'
-          - '1.17'
           - '1.18'
           - '1.x'  # latest version
     runs-on: ${{ matrix.os }}

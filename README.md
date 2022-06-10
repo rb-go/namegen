@@ -2,7 +2,7 @@
 [![license](https://img.shields.io/github/license/rb-go/namegen.svg)](LICENSE)
 [![Go Reference](https://pkg.go.dev/badge/github.com/rb-go/namegen.svg)](https://pkg.go.dev/github.com/rb-go/namegen)
 [![Go Report Card](https://goreportcard.com/badge/github.com/rb-go/namegen)](https://goreportcard.com/report/github.com/rb-go/namegen)
-[![Coverage Status](https://coveralls.io/repos/github/rb-go/namegen/badge.svg?branch=master)](https://coveralls.io/github/rb-go/namegen?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/rb-go/namegen/badge.svg)](https://coveralls.io/github/rb-go/namegen)
 
 # namegen
 
