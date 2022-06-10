@@ -31,6 +31,19 @@ func main() {
 }
 ```
 
+## Install binary
+
+You can install binary with `namegen` name to get names in command line
+
+### if golang installed
+
+```
+go install github.com/rb-go/namegen/cmd/namegen@latest
+```
+
+### from binary releases
+
+todo
 
 ## Credits
 
