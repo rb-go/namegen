@@ -1,0 +1,275 @@
+# This is an example .goreleaser.yml file with some sensible defaults.
+# Make sure to check the documentation at https://goreleaser.com
+before:
+  hooks:
+    # You may remove this if you don't use go modules.
+    - go mod tidy
+    # you may remove this if you don't need go generate
+    - go generate ./...
+
+builds:
+  - main: ./cmd/namegen
+    id: "namegen"
+    binary: namegen
+    env:
+      - CGO_ENABLED=0
+    goos:
+      - linux
+      - windows
+      - darwin
+      - freebsd
+    # GOARCH to build for.
+    # For more info refer to: https://golang.org/doc/install/source#environment
+    # Defaults are 386, amd64 and arm64.
+    goarch:
+      - amd64
+      - arm
+      - arm64
+      - mips
+      - mips64
+      - riscv64
+    # GOARM to build for when GOARCH is arm.
+    # For more info refer to: https://golang.org/doc/install/source#environment
+    # Default is only 6.
+    goarm:
+      - "6"
+      - "7"
+    # GOAMD64 to build when GOARCH is amd64.
+    # For more info refer to: https://golang.org/doc/install/source#environment
+    # Default is only v1.
+    # Go 1.18 introduced 4 architectural levels for AMD64. Each level differs in the set of x86 instructions that the compiler can include in the generated binaries:
+    #   GOAMD64=v1 (default): The baseline. Exclusively generates instructions that all 64-bit x86 processors can execute.
+    #   GOAMD64=v2: all v1 instructions, plus CMPXCHG16B, LAHF, SAHF, POPCNT, SSE3, SSE4.1, SSE4.2, SSSE3.
+    #   GOAMD64=v3: all v2 instructions, plus AVX, AVX2, BMI1, BMI2, F16C, FMA, LZCNT, MOVBE, OSXSAVE.
+    #   GOAMD64=v4: all v3 instructions, plus AVX512F, AVX512BW, AVX512CD, AVX512DQ, AVX512VL.
+    # goamd64:
+    #   - v2
+    #   - v3
+    # GOMIPS and GOMIPS64 to build when GOARCH is mips, mips64, mipsle or mips64le.
+    # For more info refer to: https://golang.org/doc/install/source#environment
+    # Default is only hardfloat.
+    gomips:
+      - hardfloat
+      - softfloat
+    # List of combinations of GOOS + GOARCH + GOARM to ignore.
+    # Default is empty.
+    # ignore:
+    #   - goos: darwin
+    #     goarch: 386
+    #   - goos: linux
+    #     goarch: arm
+    #     goarm: 7
+    #   - goarm: mips64
+    #   - gomips: hardfloat
+    #   - goamd64: v4
+    mod_timestamp: '{{ .CommitTimestamp }}'
+    flags:
+      - -trimpath
+    ldflags:
+      - -s -w -X main.version={{ .Version }} -X main.commit={{ .Commit }} -X main.date={{ .CommitDate }} -X main.builtBy=goreleaser
+    # hooks:
+    #   post:
+    #    - upx "{{ .Path }}"
+    #    - codesign -project="{{ .ProjectName }}" "{{ .Path }}"
+
+universal_binaries:
+-
+  # ID of resulting universal binary.
+  #
+  # Defaults to the project name.
+  id: namegen-merger
+
+  # IDs to use to filter the built binaries.
+  #
+  # Defaults to the `id` field.
+  ids:
+    - namegen
+
+  # Universal binary name template.
+  #
+  # You will want to change this if you have multiple builds!
+  #
+  # Defaults to '{{ .ProjectName }}'
+  name_template: '{{.ProjectName}}_{{.Version}}'
+
+  # Whether to remove the previous single-arch binaries from the artifact list.
+  # If left as false, your end release might have both several macOS archives: amd64, arm64 and all.
+  #
+  # Defaults to false.
+  replace: true
+
+  # Hooks can be used to customize the final binary,
+  # for example, to run generators.
+  # Those fields allow templates.
+  #
+  # Default is both hooks empty.
+  # hooks:
+  #   pre: rice embed-go
+  #   post: ./script.sh {{ .Path }}
+
+
+archives:
+  - replacements:
+      darwin: Darwin
+      linux: Linux
+      windows: Windows
+      386: i386
+      amd64: x86_64
+    format_overrides:
+      - goos: windows
+        format: zip
+    files:
+      - README.md
+      - LICENSE
+      # - completions/*
+      # - manpages/*
+
+
+# dockers:
+#   - image_templates:
+#       - 'goreleaser/nfpm:{{ .Tag }}-amd64'
+#       - 'ghcr.io/goreleaser/nfpm:{{ .Tag }}-amd64'
+#     dockerfile: Dockerfile
+#     use: buildx
+#     build_flag_templates:
+#       - "--pull"
+#       - "--label=org.opencontainers.image.created={{.Date}}"
+#       - "--label=org.opencontainers.image.name={{.ProjectName}}"
+#       - "--label=org.opencontainers.image.revision={{.FullCommit}}"
+#       - "--label=org.opencontainers.image.version={{.Version}}"
+#       - "--label=org.opencontainers.image.source={{.GitURL}}"
+#       - "--platform=linux/amd64"
+#   - image_templates:
+#       - 'goreleaser/nfpm:{{ .Tag }}-arm64v8'
+#       - 'ghcr.io/goreleaser/nfpm:{{ .Tag }}-arm64v8'
+#     dockerfile: Dockerfile
+#     use: buildx
+#     build_flag_templates:
+#       - "--pull"
+#       - "--label=org.opencontainers.image.created={{.Date}}"
+#       - "--label=org.opencontainers.image.name={{.ProjectName}}"
+#       - "--label=org.opencontainers.image.revision={{.FullCommit}}"
+#       - "--label=org.opencontainers.image.version={{.Version}}"
+#       - "--label=org.opencontainers.image.source={{.GitURL}}"
+#       - "--platform=linux/arm64/v8"
+#     goarch: arm64
+
+# docker_manifests:
+#   - name_template: 'goreleaser/nfpm:{{ .Tag }}'
+#     image_templates:
+#       - 'goreleaser/nfpm:{{ .Tag }}-amd64'
+#       - 'goreleaser/nfpm:{{ .Tag }}-arm64v8'
+#   - name_template: 'ghcr.io/goreleaser/nfpm:{{ .Tag }}'
+#     image_templates:
+#       - 'ghcr.io/goreleaser/nfpm:{{ .Tag }}-amd64'
+#       - 'ghcr.io/goreleaser/nfpm:{{ .Tag }}-arm64v8'
+#   - name_template: 'goreleaser/nfpm:latest'
+#     image_templates:
+#       - 'goreleaser/nfpm:{{ .Tag }}-amd64'
+#       - 'goreleaser/nfpm:{{ .Tag }}-arm64v8'
+#   - name_template: 'ghcr.io/goreleaser/nfpm:latest'
+#     image_templates:
+#       - 'ghcr.io/goreleaser/nfpm:{{ .Tag }}-amd64'
+#       - 'ghcr.io/goreleaser/nfpm:{{ .Tag }}-arm64v8'
+
+# docker_signs:
+# - cmd: cosign
+#   env:
+#   - COSIGN_EXPERIMENTAL=1
+#   artifacts: manifests
+#   output: true
+#   args:
+#   - 'sign'
+#   - '${artifact}'
+
+checksum:
+  name_template: 'checksums.txt'
+
+snapshot:
+  # Allows you to change the name of the generated snapshot
+  #
+  # Note that some pipes require this to be semantic version compliant (nfpm,
+  # for example).
+  #
+  # Default is `{{ .Version }}-SNAPSHOT-{{.ShortCommit}}`.
+  # name_template: "{{ incpatch .Version }}-next"
+  name_template: '{{ incpatch .Version }}-devel'
+
+changelog:
+  sort: asc
+  filters:
+    exclude:
+      - '^docs:'
+      - '^test:'
+
+
+# changelog:
+#   sort: asc
+#   use: github
+#   filters:
+#     exclude:
+#     - '^docs:'
+#     - '^test:'
+#     - '^chore'
+#     - Merge pull request
+#     - Merge remote-tracking branch
+#     - Merge branch
+#     - go mod tidy
+#   groups:
+#     - title: 'New Features'
+#       regexp: "^.*feat[(\\w)]*:+.*$"
+#       order: 0
+#     - title: 'Bug fixes'
+#       regexp: "^.*fix[(\\w)]*:+.*$"
+#       order: 10
+#     - title: Other work
+#       order: 999
+
+release:
+  footer: |
+    ---
+    **Full Changelog**: https://github.com/rb-go/namegen/compare/{{ .PreviousTag }}...{{ .Tag }}
+#    ---
+#    - Check out [GoReleaser](https://goreleaser.com): it integrates nFPM to the release pipeline of your Go projects.
+
+
+# signs:
+#   - artifacts: checksum
+#     args: ["--batch", "-u", "{{ .Env.GPG_FINGERPRINT }}", "--output", "${signature}", "--detach-sign", "${artifact}"]
+
+
+# brews:
+# - tap:
+#     owner: goreleaser
+#     name: homebrew-tap
+#   folder: Formula
+#   homepage: https://nfpm.goreleaser.com
+#   description: nFPM is a simple, 0-dependencies, deb, rpm and apk packager.
+#   license: MIT
+#   test: |
+#     system "#{bin}/nfpm -v"
+#   install: |-
+#     bin.install "nfpm"
+#     bash_completion.install "completions/nfpm.bash" => "nfpm"
+#     zsh_completion.install "completions/nfpm.zsh" => "_nfpm"
+#     fish_completion.install "completions/nfpm.fish"
+#     man1.install "manpages/nfpm.1.gz"
+
+
+# scoop:
+#   bucket:
+#     owner: goreleaser
+#     name: scoop-bucket
+#   homepage: https://nfpm.goreleaser.com
+#   description: nFPM is a simple, 0-dependencies, deb, rpm and apk packager.
+#   license: MIT
+
+
+# announce:
+#   skip: "{{gt .Patch 0}}"
+#   twitter:
+#     enabled: true
+#     message_template: "nFPM {{ .Tag }} was just released! See what's new: https://github.com/goreleaser/nfpm/releases/tag/{{ .Tag }}"
+#   discord:
+#     enabled: true
+#     message_template: "nFPM {{ .Tag }} is out! See what's new: https://github.com/goreleaser/nfpm/releases/tag/{{ .Tag }}"

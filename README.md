@@ -33,7 +33,9 @@ func main() {
 
 ## Use binary command
 
-You can install binary with `namegen` name to get names in command line
+You can install binary `namegen` to get names in command line
+
+### Example Usage
 
 Example:
 
@@ -45,7 +47,6 @@ or just call `namegen` binary to get new name.
 
 if `retries` flag is non-zero, a random integer between 0 and 10 will be added to the end of the name, e.g 'focused_turing3'
 
-
 ### if golang installed
 
 ```
@@ -55,6 +56,14 @@ go install github.com/rb-go/namegen/cmd/namegen@latest
 ### from binary releases
 
 todo
+
+## Contribute
+
+Pull request are welcome :)
+
+`left` - must be an adjective
+`right` - must be the last name of a famous scientist or person associated with IT. Political figures are not allowed!
+
 
 ## Credits
 
