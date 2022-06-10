@@ -9,111 +9,338 @@ import (
 
 var (
 	left = [...]string{
+		"able",
+		"accurate",
+		"actual",
+		"additional",
 		"admiring",
 		"adoring",
 		"affectionate",
+		"afraid",
+		"aggressive",
 		"agitated",
+		"alive",
 		"amazing",
 		"angry",
+		"anxious",
+		"asleep",
+		"attentive",
+		"automatic",
+		"available",
+		"aware",
 		"awesome",
+		"bad",
+		"basic",
 		"beautiful",
+		"best",
+		"big",
 		"blissful",
 		"bold",
 		"boring",
 		"brave",
+		"bright",
 		"busy",
+		"calm",
+		"capable",
+		"careful",
+		"central",
+		"certain",
 		"charming",
+		"cheap",
+		"civil",
+		"clean",
+		"clear",
 		"clever",
-		"cool",
+		"close",
+		"cold",
+		"comfortable",
+		"common",
 		"compassionate",
 		"competent",
 		"condescending",
 		"confident",
+		"conscious",
+		"consistent",
+		"constant",
+		"convenient",
+		"cool",
+		"correct",
 		"cranky",
 		"crazy",
+		"critical",
+		"cultural",
+		"curious",
+		"current",
+		"dangerous",
+		"dark",
 		"dazzling",
+		"dead",
+		"decent",
+		"deep",
+		"democratic",
+		"desperate",
 		"determined",
+		"different",
+		"difficult",
+		"dirty",
+		"distinct",
 		"distracted",
 		"dreamy",
 		"eager",
+		"early",
+		"eastern",
+		"easy",
+		"economic",
 		"ecstatic",
+		"educational",
+		"efficient",
 		"elastic",
 		"elated",
 		"elegant",
 		"eloquent",
+		"emotional",
+		"empty",
+		"entire",
 		"epic",
+		"every",
+		"exact",
 		"exciting",
+		"existing",
+		"expensive",
+		"fair",
+		"famous",
+		"fast",
+		"fat",
 		"fervent",
 		"festive",
+		"final",
+		"financial",
+		"fine",
+		"firm",
 		"flamboyant",
+		"flat",
 		"focused",
+		"foreign",
+		"formal",
+		"former",
+		"free",
+		"fresh",
 		"friendly",
+		"frightful",
 		"frosty",
+		"full",
 		"funny",
 		"gallant",
+		"general",
 		"gifted",
+		"global",
+		"good",
 		"goofy",
+		"gorgeous",
 		"gracious",
 		"great",
+		"guilty",
 		"happy",
+		"hard",
 		"hardcore",
+		"healthy",
+		"heavy",
+		"helpful",
 		"heuristic",
+		"high",
+		"historical",
+		"honest",
 		"hopeful",
+		"hot",
+		"huge",
+		"human",
 		"hungry",
+		"ill",
+		"illegal",
+		"immediate",
+		"important",
+		"impossible",
+		"impressive",
+		"independent",
 		"infallible",
+		"informal",
+		"inner",
+		"innocent",
 		"inspiring",
 		"intelligent",
 		"interesting",
+		"international",
 		"jolly",
 		"jovial",
 		"keen",
 		"kind",
+		"known",
+		"large",
+		"late",
 		"laughing",
+		"leading",
+		"left",
+		"legal",
+		"light",
+		"likely",
+		"little",
+		"local",
+		"lonely",
+		"long",
+		"loose",
+		"loud",
 		"loving",
+		"low",
 		"lucid",
+		"lucky",
 		"magical",
-		"mystifying",
+		"main",
+		"major",
+		"medical",
+		"mental",
+		"military",
 		"modest",
 		"musing",
+		"mystifying",
+		"national",
+		"natural",
 		"naughty",
+		"necessary",
 		"nervous",
+		"new",
 		"nice",
 		"nifty",
+		"normal",
 		"nostalgic",
+		"numerous",
 		"objective",
+		"obvious",
+		"official",
+		"old",
+		"open",
+		"opposite",
 		"optimistic",
+		"past",
 		"peaceful",
 		"pedantic",
 		"pensive",
+		"perfect",
+		"personal",
+		"physical",
+		"pleasant",
+		"polite",
+		"political",
+		"poor",
+		"popular",
+		"possible",
+		"powerful",
 		"practical",
 		"priceless",
+		"private",
+		"psychological",
+		"public",
+		"pure",
+		"quiet",
 		"quirky",
 		"quizzical",
+		"rare",
+		"ready",
+		"real",
+		"realistic",
+		"reasonable",
+		"recent",
 		"recursing",
 		"relaxed",
+		"relevant",
+		"religious",
+		"remarkable",
+		"remote",
+		"responsible",
 		"reverent",
+		"rich",
+		"right",
 		"romantic",
+		"rude",
 		"sad",
+		"safe",
+		"scared",
+		"secure",
+		"sensible",
 		"serene",
+		"serious",
+		"severe",
+		"sexual",
 		"sharp",
+		"short",
+		"significant",
 		"silly",
+		"similar",
+		"simple",
+		"single",
 		"sleepy",
+		"slow",
+		"small",
+		"smooth",
+		"social",
+		"sorry",
+		"special",
 		"stoic",
 		"strange",
+		"strict",
+		"strong",
 		"stupefied",
+		"substantial",
+		"successful",
+		"sudden",
+		"sufficient",
+		"suitable",
+		"sure",
 		"suspicious",
 		"sweet",
+		"tall",
+		"tasty",
+		"technical",
 		"tender",
+		"terrible",
+		"thin",
 		"thirsty",
+		"tight",
+		"tiny",
+		"tired",
+		"traditional",
+		"true",
 		"trusting",
+		"typical",
+		"ugly",
+		"unable",
+		"unfair",
+		"unhappy",
+		"united",
+		"unlikely",
 		"unruffled",
+		"unusual",
 		"upbeat",
+		"used",
+		"useful",
+		"usual",
+		"valuable",
+		"various",
 		"vibrant",
 		"vigilant",
 		"vigorous",
+		"visible",
+		"warm",
+		"weak",
+		"weird",
+		"whole",
+		"wide",
+		"willing",
+		"wise",
 		"wizardly",
 		"wonderful",
+		"wrong",
 		"xenodochial",
+		"young",
 		"youthful",
 		"zealous",
 		"zen",
@@ -122,8 +349,15 @@ var (
 	// Docker, starting from 0.7.x, generates names from notable scientists and hackers.
 	// Please, for any amazing man that you add to the list, consider adding an equally amazing woman to it, and vice versa.
 	right = [...]string{
+
+		// Ameyo Stella Shade Adadevoh - Nigerian physician whose expertise and heroic efforts curbed the spread of Ebola in Nigeria in 2014. https://en.wikipedia.org/wiki/Ameyo_Adadevoh
+		"adadevoh",
+
 		// Maria Gaetana Agnesi - Italian mathematician, philosopher, theologian and humanitarian. She was the first woman to write a mathematics handbook and the first woman appointed as a Mathematics Professor at a University. https://en.wikipedia.org/wiki/Maria_Gaetana_Agnesi
 		"agnesi",
+
+		// Agnodice - First female midwife or physician in ancient Athens. https://en.wikipedia.org/wiki/Agnodice
+		"agnodice",
 
 		// Muhammad ibn Jābir al-Ḥarrānī al-Battānī was a founding father of astronomy. https://en.wikipedia.org/wiki/Mu%E1%B8%A5ammad_ibn_J%C4%81bir_al-%E1%B8%A4arr%C4%81n%C4%AB_al-Batt%C4%81n%C4%AB
 		"albattani",
@@ -137,20 +371,32 @@ var (
 		// Kathleen Antonelli, American computer programmer and one of the six original programmers of the ENIAC - https://en.wikipedia.org/wiki/Kathleen_Antonelli
 		"antonelli",
 
+		// Virginia Apgar - an American anesthesiologist, the inventor of the Apgar Score, a way to quickly assess the health of a newborn child. https://en.wikipedia.org/wiki/Virginia_Apgar
+		"apgar",
+
 		// Archimedes was a physicist, engineer and mathematician who invented too many things to list them here. https://en.wikipedia.org/wiki/Archimedes
 		"archimedes",
 
 		// Maria Ardinghelli - Italian translator, mathematician and physicist - https://en.wikipedia.org/wiki/Maria_Ardinghelli
 		"ardinghelli",
 
+		// Neil Armstrong - American astronaut, aeronautical engineer, and the first person to walk on the Moon. - https://en.wikipedia.org/wiki/Neil_Armstrong
+		"armstrong",
+
 		// Aryabhata - Ancient Indian mathematician-astronomer during 476-550 CE https://en.wikipedia.org/wiki/Aryabhata
 		"aryabhata",
+
+		// Barbara S. Askins - American chemist who invented a method to enhance underexposed photographic negatives (used by NASA and the medical industry). https://en.wikipedia.org/wiki/Barbara_Askins
+		"askins",
 
 		// Wanda Austin - Wanda Austin is the President and CEO of The Aerospace Corporation, a leading architect for the US security space programs. https://en.wikipedia.org/wiki/Wanda_Austin
 		"austin",
 
 		// Charles Babbage invented the concept of a programmable computer. https://en.wikipedia.org/wiki/Charles_Babbage.
 		"babbage",
+
+		// Alice Augusta Ball - African American chemist who developed an injectable herbal extract (ethyl hydnocarpate) that was the most effective treatment for leprosy during the early 20th century. https://en.wikipedia.org/wiki/Alice_Ball
+		"ball",
 
 		// Stefan Banach - Polish mathematician, was one of the founders of modern functional analysis. https://en.wikipedia.org/wiki/Stefan_Banach
 		"banach",
@@ -163,6 +409,9 @@ var (
 
 		// Jean Bartik, born Betty Jean Jennings, was one of the original programmers for the ENIAC computer. https://en.wikipedia.org/wiki/Jean_Bartik
 		"bartik",
+
+		// Clara Barton - Founder of the American Red Cross, hospital nurse during the American Civil War, and civil rights advocate. https://en.wikipedia.org/wiki/Clara_Barton
+		"barton",
 
 		// Laura Bassi, the world's first female professor https://en.wikipedia.org/wiki/Laura_Bassi
 		"bassi",
@@ -191,6 +440,9 @@ var (
 		// Elizabeth Blackwell - American doctor and first American woman to receive a medical degree - https://en.wikipedia.org/wiki/Elizabeth_Blackwell
 		"blackwell",
 
+		// Susanne Bødker - Researcher and author focued on human-computer interaction https://en.wikipedia.org/wiki/Susanne_B%C3%B8dker
+		"bodker",
+
 		// Niels Bohr is the father of quantum theory. https://en.wikipedia.org/wiki/Niels_Bohr.
 		"bohr",
 
@@ -214,6 +466,9 @@ var (
 
 		// Walter Houser Brattain co-invented the transistor - https://en.wikipedia.org/wiki/Walter_Houser_Brattain
 		"brattain",
+
+		// Harriet Brooks - Canadian Nuclear Physicist. Famous for her research on nuclear transmutations and radioactivity. Among the first persons to discover radon and to try to determine its atomic mass. https://en.wikipedia.org/wiki/Harriet_Brooks
+		"brooks",
 
 		// Emmett Brown invented time travel. https://en.wikipedia.org/wiki/Emmett_Brown (thanks Brian Goff)
 		"brown",
@@ -266,8 +521,17 @@ var (
 		// Jane Colden - American botanist widely considered the first female American botanist - https://en.wikipedia.org/wiki/Jane_Colden
 		"colden",
 
+		// Fernando Corbató - American computer scientist instrumental in developing the first time-sharing systems (which directly inspired Unix). https://en.wikipedia.org/wiki/Fernando_J._Corbat%C3%B3
+		"corbato",
+
+		// Nicolaus Copernicus - Renaissance-era polymath, the author of theory of the universe with the Sun rather than Earth at the center. https://en.wikipedia.org/wiki/Nicolaus_Copernicus
+		"copernicus",
+
 		// Gerty Theresa Cori - American biochemist who became the third woman—and first American woman—to win a Nobel Prize in science, and the first woman to be awarded the Nobel Prize in Physiology or Medicine. Cori was born in Prague. https://en.wikipedia.org/wiki/Gerty_Cori
 		"cori",
+
+		// Thomas H. Cormen - American computer scientist and professor. Co-author of the book Introduction To Algorithms. https://en.wikipedia.org/wiki/Thomas_H._Cormen
+		"cormen",
 
 		// Seymour Roger Cray was an American electrical engineer and supercomputer architect who designed a series of computers that were the fastest in the world for decades. https://en.wikipedia.org/wiki/Seymour_Cray
 		"cray",
@@ -280,11 +544,17 @@ var (
 		// Marie Curie discovered radioactivity. https://en.wikipedia.org/wiki/Marie_Curie.
 		"curie",
 
+		// Joan Daemen - Belgian cryptographer best known as the co-designer of Rijndael, which went on to be selected as the Advanced Encryption Standard (AES) and Keccak, which went on to be selected as the Secure Hash Algorithm 3 (SHA-3). https://en.wikipedia.org/wiki/Joan_Daemen
+		"daemen",
+
 		// Charles Darwin established the principles of natural evolution. https://en.wikipedia.org/wiki/Charles_Darwin.
 		"darwin",
 
 		// Leonardo Da Vinci invented too many things to list here. https://en.wikipedia.org/wiki/Leonardo_da_Vinci.
 		"davinci",
+
+		// Democritus - a pre-socratic philosopher who was one of the founders of the Atomist school of philosophy. https://en.wikipedia.org/wiki/Democritus
+		"democritus",
 
 		// A. K. (Alexander Keewatin) Dewdney, Canadian mathematician, computer scientist, author and filmmaker. Contributor to Scientific American's "Computer Recreations" from 1984 to 1991. Author of Core War (program), The Planiverse, The Armchair Universe, The Magic Machine, The New Turing Omnibus, and more. https://en.wikipedia.org/wiki/Alexander_Dewdney
 		"dewdney",
@@ -306,6 +576,9 @@ var (
 
 		// Donna Dubinsky - played an integral role in the development of personal digital assistants (PDAs) serving as CEO of Palm, Inc. and co-founding Handspring. https://en.wikipedia.org/wiki/Donna_Dubinsky
 		"dubinsky",
+
+		// Sylvia Earle - American oceanographer and marine biologist known for her research on marine algae and her books and documentaries designed to raise awareness of the threats that overfishing and pollution pose to the world’s oceans. https://en.wikipedia.org/wiki/Sylvia_Earle
+		"earle",
 
 		// Annie Easley - She was a leading member of the team which developed software for the Centaur rocket stage and one of the first African-Americans in her field. https://en.wikipedia.org/wiki/Annie_Easley
 		"easley",
@@ -340,6 +613,12 @@ var (
 		// Michael Faraday - British scientist who contributed to the study of electromagnetism and electrochemistry. https://en.wikipedia.org/wiki/Michael_Faraday
 		"faraday",
 
+		// Marga Faulstich - German glass chemist known for her research which forms the basis of techniques used in the manufacture of lightweight anti-reflective glasses; inventor of the SF 64 corrective lens (which was thinner, lighter and more aesthetically pleasing). https://en.wikipedia.org/wiki/Marga_Faulstich
+		"faulstich",
+
+		// Genevieve Grotjan Feinstein - American mathematician and cryptanalyst known for deciphering the Japanese World War II cipher machine, Purple and her later work on the Cold War-era Venona project. https://en.wikipedia.org/wiki/Genevieve_Grotjan_Feinstein
+		"feinstein",
+
 		// Horst Feistel - German-born American cryptographer who was one of the earliest non-government researchers to study the design and theory of block ciphers. Co-developer of DES and Lucifer. Feistel networks, a symmetric structure used in the construction of block ciphers are named after him. https://en.wikipedia.org/wiki/Horst_Feistel
 		"feistel",
 
@@ -354,6 +633,9 @@ var (
 
 		// Benjamin Franklin is famous for his experiments in electricity and the invention of the lightning rod.
 		"franklin",
+
+		// Elizebeth Smith Friedman was dubbed as "America's first female cryptanalyst". During World War II she solved numerous cipher systems used by the Germans. https://en.wikipedia.org/wiki/Elizebeth_Smith_Friedman
+		"friedman",
 
 		// Yuri Alekseyevich Gagarin - Soviet pilot and cosmonaut, best known as the first human to journey into outer space. https://en.wikipedia.org/wiki/Yuri_Gagarin
 		"gagarin",
@@ -373,8 +655,14 @@ var (
 		// Johann Carl Friedrich Gauss - German mathematician who made significant contributions to many fields, including number theory, algebra, statistics, analysis, differential geometry, geodesy, geophysics, mechanics, electrostatics, magnetic fields, astronomy, matrix theory, and optics. https://en.wikipedia.org/wiki/Carl_Friedrich_Gauss
 		"gauss",
 
+		// Maiju Gebhard - developed and popularized the dish drying cabinet which have become a standard accessory in virtually every Finnish home saving approximately 50% of the time related to doing dishes. https://en.wikipedia.org/wiki/Dish_drying_cabinet
+		"gebhard",
+
 		// Marie-Sophie Germain - French mathematician, physicist and philosopher. Known for her work on elasticity theory, number theory and philosophy. https://en.wikipedia.org/wiki/Sophie_Germain
 		"germain",
+
+		// Maria Goeppert Mayer - German-American theoretical physicist and Nobel Laureate in Physics. Known for her discovery of the nuclear shell model of the atomic nucleus. https://en.wikipedia.org/wiki/Maria_Goeppert_Mayer
+		"goeppert",
 
 		// Adele Goldberg, was one of the designers and developers of the Smalltalk language. https://en.wikipedia.org/wiki/Adele_Goldberg_(computer_scientist)
 		"goldberg",
@@ -390,6 +678,9 @@ var (
 
 		// Jane Goodall - British primatologist, ethologist, and anthropologist who is considered to be the world's foremost expert on chimpanzees - https://en.wikipedia.org/wiki/Jane_Goodall
 		"goodall",
+
+		//James Arthur Gosling, often referred to as "Dr. Java", OC (born May 19, 1955) is a Canadian computer scientist, best known as the founder and lead designer behind the Java programming language. https://en.wikipedia.org/wiki/James_Gosling
+		"gosling",
 
 		// Stephen Jay Gould was was an American paleontologist, evolutionary biologist, and historian of science. He is most famous for the theory of punctuated equilibrium - https://en.wikipedia.org/wiki/Stephen_Jay_Gould
 		"gould",
@@ -457,6 +748,9 @@ var (
 		// Yeong-Sil Jang was a Korean scientist and astronomer during the Joseon Dynasty; he invented the first metal printing press and water gauge. https://en.wikipedia.org/wiki/Jang_Yeong-sil
 		"jang",
 
+		// Frederick Jelinek - Czech-American scientist, father of statistical automatic speech recognition. https://en.wikipedia.org/wiki/Frederick_Jelinek
+		"jelinek",
+
 		// Mae Carol Jemison -  is an American engineer, physician, and former NASA astronaut. She became the first black woman to travel in space when she served as a mission specialist aboard the Space Shuttle Endeavour - https://en.wikipedia.org/wiki/Mae_Jemison
 		"jemison",
 
@@ -511,6 +805,9 @@ var (
 		// Sophie Kowalevski - Russian mathematician responsible for important original contributions to analysis, differential equations and mechanics - https://en.wikipedia.org/wiki/Sofia_Kovalevskaya
 		"kowalevski",
 
+		// Stephanie Louise Kwolek - American chemist who invented Kevlar. https://en.wikipedia.org/wiki/Stephanie_Kwolek
+		"kwolek",
+
 		// Marie-Jeanne de Lalande - French astronomer, mathematician and cataloguer of stars - https://en.wikipedia.org/wiki/Marie-Jeanne_de_Lalande
 		"lalande",
 
@@ -532,6 +829,12 @@ var (
 		// Inge Lehmann - Danish seismologist and geophysicist. Known for discovering in 1936 that the Earth has a solid inner core inside a molten outer core. https://en.wikipedia.org/wiki/Inge_Lehmann
 		"lehmann",
 
+		// Leucippus - Believed to be the founder of the Atomist school of philosophy. Mentor to Democritus. https://en.wikipedia.org/wiki/Leucippus
+		"leucippus",
+
+		// Vladimir Levenshtein - Russian scientist known for his work on combinatorial design, error-correcting codes and information theory; creator of the Levenshtein distance. https://en.wikipedia.org/wiki/Vladimir_Levenshtein
+		"levenshtein",
+
 		// Daniel Lewin - Mathematician, Akamai co-founder, soldier, 9/11 victim-- Developed optimization techniques for routing traffic on the internet. Died attempting to stop the 9-11 hijackers. https://en.wikipedia.org/wiki/Daniel_Lewin
 		"lewin",
 
@@ -544,8 +847,14 @@ var (
 		// Ada Lovelace invented the first algorithm. https://en.wikipedia.org/wiki/Ada_Lovelace (thanks James Turnbull)
 		"lovelace",
 
+		// Lucretius - ancient greek philosopher whose ideas about the natural world were early precursors to Darwin's Theory of Evolution. Also a proponent of Atomism and Empiricism. https://en.wikipedia.org/wiki/Lucretius
+		"lucretius",
+
 		// Auguste and Louis Lumière - the first filmmakers in history - https://en.wikipedia.org/wiki/Auguste_and_Louis_Lumi%C3%A8re
 		"lumiere",
+
+		// Prasanta Chandra Mahalanobis - Indian applied statistician, best known for the Mahalanobis distance and for making ground-breaking contributions related to large-scale sample surveys. https://en.wikipedia.org/wiki/Prasanta_Chandra_Mahalanobis
+		"mahalanobis",
 
 		// Mahavira - Ancient Indian mathematician during 9th century AD who discovered basic algebraic identities - https://en.wikipedia.org/wiki/Mah%C4%81v%C4%ABra_(mathematician)
 		"mahavira",
@@ -598,11 +907,20 @@ var (
 		// Maryam Mirzakhani - an Iranian mathematician and the first woman to win the Fields Medal. https://en.wikipedia.org/wiki/Maryam_Mirzakhani
 		"mirzakhani",
 
+		// Maria Mitchell - first female professional astronomer in the US, discoverer of "Miss Mitchell's Comet". https://en.wikipedia.org/wiki/Maria_Mitchell
+		"mitchell",
+
+		// Rita Levi-Montalcini - Won Nobel Prize in Physiology or Medicine jointly with colleague Stanley Cohen for the discovery of nerve growth factor (https://en.wikipedia.org/wiki/Rita_Levi-Montalcini)
+		"montalcini",
+
 		// Rita Levi-Montalcini - Won Nobel Prize in Physiology or Medicine jointly with colleague Stanley Cohen for the discovery of nerve growth factor (https://en.wikipedia.org/wiki/Rita_Levi-Montalcini)
 		"montalcini",
 
 		// Gordon Earle Moore - American engineer, Silicon Valley founding father, author of Moore's law. https://en.wikipedia.org/wiki/Gordon_Moore
 		"moore",
+
+		// Mary Sherman Morgan - American rocket fuel scientist who invented the liquid rocket fuel Hydyne. https://en.wikipedia.org/wiki/Mary_Sherman_Morgan
+		"morgan",
 
 		// Samuel Morse - contributed to the invention of a single-wire telegraph system based on European telegraphs and was a co-developer of the Morse code - https://en.wikipedia.org/wiki/Samuel_Morse
 		"morse",
@@ -631,6 +949,9 @@ var (
 		// Alfred Nobel - a Swedish chemist, engineer, innovator, and armaments manufacturer (inventor of dynamite) - https://en.wikipedia.org/wiki/Alfred_Nobel
 		"nobel",
 
+		// Ida Noddack - German chemist and physicist, best known for suggesting the idea of nuclear fission for the first time and for the discovery of rhenium. https://en.wikipedia.org/wiki/Ida_Noddack
+		"noddack",
+
 		// Emmy Noether, German mathematician. Noether's Theorem is named after her. https://en.wikipedia.org/wiki/Emmy_Noether
 		"noether",
 
@@ -640,8 +961,14 @@ var (
 		// Robert Noyce invented silicon integrated circuits and gave Silicon Valley its name. - https://en.wikipedia.org/wiki/Robert_Noyce
 		"noyce",
 
+		// Julius Robert Oppenheimer - American theoretical physicist best known for the Born–Oppenheimer approximation for molecular wave functions, his work on the theory of electrons and positrons, the Oppenheimer–Phillips process in nuclear fusion, the first prediction of quantum tunneling and as the leader of the Manhattan Project. https://en.wikipedia.org/wiki/J._Robert_Oppenheimer
+		"oppenheimer",
+
 		// Panini - Ancient Indian linguist and grammarian from 4th century CE who worked on the world's first formal system - https://en.wikipedia.org/wiki/P%C4%81%E1%B9%87ini#Comparison_with_modern_formal_systems
 		"panini",
+
+		// George Papanicolaou - Greek pioneer in cytopathology and early cancer detection; inventor of the Pap smear. https://en.wikipedia.org/wiki/Georgios_Papanikolaou
+		"papanicolaou",
 
 		// Ambroise Pare invented modern surgery. https://en.wikipedia.org/wiki/Ambroise_Par%C3%A9
 		"pare",
@@ -679,6 +1006,9 @@ var (
 		// Srinivasa Ramanujan - Indian mathematician and autodidact who made extraordinary contributions to mathematical analysis, number theory, infinite series, and continued fractions. - https://en.wikipedia.org/wiki/Srinivasa_Ramanujan
 		"ramanujan",
 
+		// Marian Adam Rejewski - Polish mathematician and cryptologist who reconstructed the Nazi German Enigma cipher machine sight-unseen in 1932. https://en.wikipedia.org/wiki/Marian_Rejewski
+		"rejewski",
+
 		// Sally Kristen Ride was an American physicist and astronaut. She was the first American woman in space, and the youngest American astronaut. https://en.wikipedia.org/wiki/Sally_Ride
 		"ride",
 
@@ -697,8 +1027,14 @@ var (
 		// Rosalind Franklin - British biophysicist and X-ray crystallographer whose research was critical to the understanding of DNA - https://en.wikipedia.org/wiki/Rosalind_Franklin
 		"rosalind",
 
+		// Jerzy Witold Rozycki - Polish mathematician and cryptologist who (together with Marian Rejewski and Henryk Zygalski) solved the German military Enigma cipher machine. https://en.wikipedia.org/wiki/Jerzy_R%C3%B3%C5%BCycki
+		"rozycki",
+
 		// Vera Rubin - American astronomer who pioneered work on galaxy rotation rates. https://en.wikipedia.org/wiki/Vera_Rubin
 		"rubin",
+
+		// Joanna Rutkowska - Polish computer security researcher. https://en.wikipedia.org/wiki/Joanna_Rutkowska
+		"rutkowska",
 
 		// Meghnad Saha - Indian astrophysicist best known for his development of the Saha equation, used to describe chemical and physical conditions in stars - https://en.wikipedia.org/wiki/Meghnad_Saha
 		"saha",
@@ -708,6 +1044,9 @@ var (
 
 		// Mildred Sanderson - American mathematician best known for Sanderson's theorem concerning modular invariants. https://en.wikipedia.org/wiki/Mildred_Sanderson
 		"sanderson",
+
+		// Katsuko Saruhashi - Japanese geochemist known for her creation of the first methods for measuring carbon dioxide levels in seawater. She also developed a technique to trace the travel of radioactive fallout across the oceans that led to restricting oceanic nuclear experimentation in 1963. https://en.wikipedia.org/wiki/Katsuko_Saruhashi
+		"saruhashi",
 
 		// Satoshi Nakamoto is the name used by the unknown person or group of people who developed bitcoin, authored the bitcoin white paper, and created and deployed bitcoin's original reference implementation. https://en.wikipedia.org/wiki/Satoshi_Nakamoto
 		"satoshi",
@@ -742,8 +1081,17 @@ var (
 		// Frances Spence - one of the original programmers of the ENIAC. https://en.wikipedia.org/wiki/ENIAC - https://en.wikipedia.org/wiki/Frances_Spence
 		"spence",
 
+		// Richard Matthew Stallman - the founder of the Free Software movement, the GNU project, the Free Software Foundation, and the League for Programming Freedom. He also invented the concept of copyleft to protect the ideals of this movement, and enshrined this concept in the widely-used GPL (General Public License) for software. https://en.wikiquote.org/wiki/Richard_Stallman
+		"stallman",
+
+		// Nettie Maria Stevens - American geneticist credited with the discovery of sex chromosomes. https://en.wikipedia.org/wiki/Nettie_Stevens
+		"stevens",
+
 		// Michael Stonebraker is a database research pioneer and architect of Ingres, Postgres, VoltDB and SciDB. Winner of 2014 ACM Turing Award. https://en.wikipedia.org/wiki/Michael_Stonebraker
 		"stonebraker",
+
+		// Bjarne Stroustrup - Creator of C++. https://en.wikipedia.org/wiki/Bjarne_Stroustrup
+		"stroustrup",
 
 		// Ivan Edward Sutherland - American computer scientist and Internet pioneer, widely regarded as the father of computer graphics. https://en.wikipedia.org/wiki/Ivan_Sutherland
 		"sutherland",
@@ -756,6 +1104,9 @@ var (
 
 		// Bertha Swirles was a theoretical physicist who made a number of contributions to early quantum theory. https://en.wikipedia.org/wiki/Bertha_Swirles
 		"swirles",
+
+		// Robert Endre Tarjan - American computer scientist and mathematician. Inventor of several graph algorithms, including Tarjan's off-line lowest common ancestors algorithm, and co-inventor of Fibonacci heaps and splay trees. https://en.wikipedia.org/wiki/Robert_Tarjan
+		"tarjan",
 
 		// Helen Brooke Taussig - American cardiologist and founder of the field of paediatric cardiology. https://en.wikipedia.org/wiki/Helen_B._Taussig
 		"taussig",
@@ -790,6 +1141,9 @@ var (
 		// Cédric Villani - French mathematician, won Fields Medal, Fermat Prize and Poincaré Price for his work in differential geometry and statistical mechanics. https://en.wikipedia.org/wiki/C%C3%A9dric_Villani
 		"villani",
 
+		// Artturi Ilmari Virtanen - Finnish chemist and recipient of the 1945 Nobel Prize in Chemistry "for his research and inventions in agricultural and nutrition chemistry, especially for his fodder preservation method". https://en.wikipedia.org/wiki/Artturi_Ilmari_Virtanen
+		"virtanen",
+
 		// Sir Mokshagundam Visvesvaraya - is a notable Indian engineer.  He is a recipient of the Indian Republic's highest honour, the Bharat Ratna, in 1955. On his birthday, 15 September is celebrated as Engineer's Day in India in his memory - https://en.wikipedia.org/wiki/Visvesvaraya
 		"visvesvaraya",
 
@@ -810,6 +1164,9 @@ var (
 
 		// Malcolm John Williamson - British mathematician and cryptographer employed by the GCHQ. Developed in 1974 what is now known as Diffie-Hellman key exchange (Diffie and Hellman first published the scheme in 1976). https://en.wikipedia.org/wiki/Malcolm_J._Williamson
 		"williamson",
+
+		// Lucy Wills - English haematologist whose analysis of prenatal anemia changed the face of preventive prenatal care for women everywhere. https://en.wikipedia.org/wiki/Lucy_Wills
+		"wills",
 
 		// Sophie Wilson designed the first Acorn Micro-Computer and the instruction set for ARM processors. https://en.wikipedia.org/wiki/Sophie_Wilson
 		"wilson",
@@ -832,8 +1189,17 @@ var (
 		// Ada Yonath - an Israeli crystallographer, the first woman from the Middle East to win a Nobel prize in the sciences. https://en.wikipedia.org/wiki/Ada_Yonath
 		"yonath",
 
+		// Lotfi Aliasker Zadeh - Azerbaijani scientist best known for proposing fuzzy mathematics. https://en.wikipedia.org/wiki/Lotfi_A._Zadeh
+		"zadeh",
+
+		// Yaakov Ziv - Israeli electrical engineer who, along with Abraham Lempel, developed the LZ family of lossless data compression algorithms. https://en.wikipedia.org/wiki/Yaakov_Ziv
+		"ziv",
+
 		// Nikolay Yegorovich Zhukovsky (Russian: Никола́й Его́рович Жуко́вский, January 17 1847 – March 17, 1921) was a Russian scientist, mathematician and engineer, and a founding father of modern aero- and hydrodynamics. Whereas contemporary scientists scoffed at the idea of human flight, Zhukovsky was the first to undertake the study of airflow. He is often called the Father of Russian Aviation. https://en.wikipedia.org/wiki/Nikolay_Yegorovich_Zhukovsky
 		"zhukovsky",
+
+		// Henryk Zygalski - Polish mathematician and cryptologist who (together with Marian Rejewski and Jerzy Rozycki) solved the German military Enigma cipher machine. https://en.wikipedia.org/wiki/Henryk_Zygalski
+		"zygalski",
 	}
 )
 
