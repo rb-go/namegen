@@ -55,15 +55,16 @@ go install github.com/rb-go/namegen/cmd/namegen@latest
 
 ### from binary releases
 
-todo
+Check [releases page](https://github.com/rb-go/namegen/releases) to get latest binary for many platforms
 
 ## Contribute
 
-Pull request are welcome :)
+Pull request are welcome :) 
 
-`left` - must be an adjective
-`right` - must be the last name of a famous scientist or person associated with IT. Political figures are not allowed!
+But follow with rules:
 
+- `left` - must be an adjective
+- `right` - must be the last name of a famous scientist or person associated with IT. Political figures are not allowed!
 
 ## Credits
 
