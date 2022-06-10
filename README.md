@@ -31,9 +31,20 @@ func main() {
 }
 ```
 
-## Install binary
+## Use binary command
 
 You can install binary with `namegen` name to get names in command line
+
+Example:
+
+```
+namegen -retries=1
+```
+
+or just call `namegen` binary to get new name.
+
+if `retries` flag is non-zero, a random integer between 0 and 10 will be added to the end of the name, e.g 'focused_turing3'
+
 
 ### if golang installed
 
