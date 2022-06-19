@@ -1,16 +1,17 @@
+# namegen
 
-[![license](https://img.shields.io/github/license/rb-go/namegen.svg)](LICENSE)
 [![Go Reference](https://pkg.go.dev/badge/github.com/rb-go/namegen.svg)](https://pkg.go.dev/github.com/rb-go/namegen)
 [![Go Report Card](https://goreportcard.com/badge/github.com/rb-go/namegen)](https://goreportcard.com/report/github.com/rb-go/namegen)
 [![Coverage Status](https://coveralls.io/repos/github/rb-go/namegen/badge.svg)](https://coveralls.io/github/rb-go/namegen)
+[![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/rb-go/namegenen)](https://github.com/rb-go/namegen/releases)
+[![GitHub go.mod Go version](https://img.shields.io/github/go-mod/go-version/rb-go/namegenen)](https://github.com/rb-go/namegen)
+[![license](https://img.shields.io/github/license/rb-go/namegen.svg)](LICENSE)
 
-# namegen
-
-Funny name generator based on docker namesgenerator
+Funny name generator based on docker namesgenerator but with some additions
 
 ## About 
 
-Package namegen is a name generator util for golang that generates funny names like `hungry_chaplygin`
+Package namegen is a name generator util for golang that generates funny names like `hungry_chaplygin` with cmd command support (see installation section)
 
 ## Usage
 
