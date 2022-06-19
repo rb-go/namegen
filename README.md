@@ -1,10 +1,10 @@
 # namegen
 
 [![Go Reference](https://pkg.go.dev/badge/github.com/rb-go/namegen.svg)](https://pkg.go.dev/github.com/rb-go/namegen)
-[![Go Report Card](https://goreportcard.com/badge/github.com/rb-go/namegen)](https://goreportcard.com/report/github.com/rb-go/namegen)
-[![Coverage Status](https://coveralls.io/repos/github/rb-go/namegen/badge.svg)](https://coveralls.io/github/rb-go/namegen)
 [![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/rb-go/namegen)](https://github.com/rb-go/namegen/releases)
 [![GitHub go.mod Go version](https://img.shields.io/github/go-mod/go-version/rb-go/namegen)](https://github.com/rb-go/namegen)
+[![Go Report Card](https://goreportcard.com/badge/github.com/rb-go/namegen)](https://goreportcard.com/report/github.com/rb-go/namegen)
+[![Coverage Status](https://coveralls.io/repos/github/rb-go/namegen/badge.svg)](https://coveralls.io/github/rb-go/namegen)
 [![license](https://img.shields.io/github/license/rb-go/namegen.svg)](LICENSE)
 
 Funny name generator based on docker namesgenerator but with some additions
